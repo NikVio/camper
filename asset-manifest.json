@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/camper/static/css/main.df731936.css",
+    "main.js": "/camper/static/js/main.603d7125.js",
+    "static/js/661.a85fc723.chunk.js": "/camper/static/js/661.a85fc723.chunk.js",
+    "static/js/90.57d547c3.chunk.js": "/camper/static/js/90.57d547c3.chunk.js",
+    "static/js/135.f4d18014.chunk.js": "/camper/static/js/135.f4d18014.chunk.js",
+    "static/js/802.2502037c.chunk.js": "/camper/static/js/802.2502037c.chunk.js",
+    "static/js/850.74e41bc0.chunk.js": "/camper/static/js/850.74e41bc0.chunk.js",
+    "static/js/242.40553fa8.chunk.js": "/camper/static/js/242.40553fa8.chunk.js",
+    "static/js/803.8a44c615.chunk.js": "/camper/static/js/803.8a44c615.chunk.js",
+    "static/media/sprite.svg": "/camper/static/media/sprite.23810a2c3ab844da0d2599493d61ad56.svg",
+    "index.html": "/camper/index.html",
+    "main.df731936.css.map": "/camper/static/css/main.df731936.css.map",
+    "main.603d7125.js.map": "/camper/static/js/main.603d7125.js.map",
+    "661.a85fc723.chunk.js.map": "/camper/static/js/661.a85fc723.chunk.js.map",
+    "90.57d547c3.chunk.js.map": "/camper/static/js/90.57d547c3.chunk.js.map",
+    "135.f4d18014.chunk.js.map": "/camper/static/js/135.f4d18014.chunk.js.map",
+    "802.2502037c.chunk.js.map": "/camper/static/js/802.2502037c.chunk.js.map",
+    "850.74e41bc0.chunk.js.map": "/camper/static/js/850.74e41bc0.chunk.js.map",
+    "242.40553fa8.chunk.js.map": "/camper/static/js/242.40553fa8.chunk.js.map",
+    "803.8a44c615.chunk.js.map": "/camper/static/js/803.8a44c615.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df731936.css",
+    "static/js/main.603d7125.js"
+  ]
+}
