@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmy_app=self.webpackChunkmy_app||[]).push([[135],{135:(e,s,a)=>{a.r(s),a.d(s,{default:()=>n});a(43);const t=a.p+"static/media/sprite.23810a2c3ab844da0d2599493d61ad56.svg";var c=a(579);function n(){return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)("h1",{children:"FavoritesPage"}),(0,c.jsx)("button",{children:(0,c.jsx)("svg",{children:(0,c.jsx)("use",{href:"".concat(t,"#icon-Petrol")})})})]})}}}]);
-//# sourceMappingURL=135.f4d18014.chunk.js.map
