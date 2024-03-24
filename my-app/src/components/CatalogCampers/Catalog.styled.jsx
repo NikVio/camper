@@ -131,6 +131,50 @@ export const AC = styled.div`
   width: 87px;
 `;
 
+export const Conditioner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: ${theme.color.gray};
+  padding: 12px 18px;
+  width: 187px;
+`;
+
+export const CD = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: ${theme.color.gray};
+  padding: 12px 18px;
+  width: 88px;
+`;
+
+export const Radio = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: ${theme.color.gray};
+  padding: 12px 18px;
+  width: 108px;
+`;
+
+export const Hob = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: ${theme.color.gray};
+  padding: 12px 18px;
+  width: 108px;
+`;
+
 export const BtnMore = styled.button`
   min-width: 166px;
   padding: 16px 40px;

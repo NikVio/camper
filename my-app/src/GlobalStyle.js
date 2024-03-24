@@ -45,7 +45,13 @@ a {
   text-decoration: none;
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 button {
   cursor: pointer;
 }
+
+
 `;

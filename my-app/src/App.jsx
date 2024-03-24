@@ -5,11 +5,6 @@ import { AppLayout } from "./components/AppLayout/AppLayout";
 const HomePage = lazy(() => import("./Pages/HomePage"));
 const CatalogPage = lazy(() => import("./Pages/CatalogPage/CatalogPage"));
 const FavoritesPage = lazy(() => import("./Pages/FavoritesPage"));
-const CampersDetails = lazy(() =>
-  import("./components/CampersDetails/CampersDetails")
-);
-const Features = lazy(() => import("./components/Features/Features"));
-const Reviews = lazy(() => import("./components/Reviews/Reviews"));
 const NotFound = lazy(() => import("./components/NotFound/NotFoundPage"));
 
 function App() {
@@ -19,10 +14,6 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="campers" element={<CatalogPage />} />
         <Route path="favorites" element={<FavoritesPage />} />
-        <Route path="campers/:campersId" element={<CampersDetails />}>
-          <Route path="features" element={<Features />} />
-          <Route path="reviews" element={<Reviews />} />
-        </Route>
       </Route>
 
       <Route path="*" element={<NotFound />} />

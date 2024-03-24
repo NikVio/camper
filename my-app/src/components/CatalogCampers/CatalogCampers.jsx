@@ -1,34 +1,22 @@
 import {
-  AC,
-  Adults,
-  Automatic,
-  Beds,
   BoxImg,
   BoxName,
   BoxPrice,
-  BoxSegments,
   BtnHeart,
   BtnMore,
   DescrText,
   Img,
-  Kitchen,
-  Petrol,
   Wrapper,
 } from "./Catalog.styled";
 import sprite from "../../assets/sprite.svg";
+import { SegmentsCatalog } from "../Segments/SegmentsCatalog";
+import { useState } from "react";
+import { BasicModalWindow } from "../BaseModal/BaseModal";
+import CampersDetails from "../CampersDetails/CampersDetails";
 
-export const CatalogCampers = ({
-  item: {
-    photo,
-    name,
-    price,
-    rating,
-    location,
-    description,
-    adults,
-    details: { beds },
-  },
-}) => {
+export const CatalogCampers = ({ item }) => {
+  const { photo, name, price, rating, location, description } = item;
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Wrapper>
       <BoxImg>
@@ -80,87 +68,13 @@ export const CatalogCampers = ({
           <p>{location}</p>
         </div>
         <DescrText>{description}</DescrText>
-        <BoxSegments>
-          <li>
-            <Adults>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-adults`} />
-              </svg>
-              {adults} adults
-            </Adults>
-          </li>
-          <li>
-            <Automatic>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-Automatic`} />
-              </svg>
-              Automatic
-            </Automatic>
-          </li>
-          <li>
-            <Petrol>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-Petrol`} />
-              </svg>
-              Petrol
-            </Petrol>
-          </li>
-          <li>
-            <Kitchen>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-Kitchen`} />
-              </svg>
-              Kitchen
-            </Kitchen>
-          </li>
-          <li>
-            <Beds>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-beds`} />
-              </svg>
-              {beds} beds
-            </Beds>
-          </li>
-          <li>
-            <AC>
-              <svg
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
-              >
-                <use href={`${sprite}#icon-adults`} />
-              </svg>
-              AC
-            </AC>
-          </li>
-        </BoxSegments>
-        <BtnMore>Show more</BtnMore>
+        <SegmentsCatalog item={item} />
+        <BtnMore onClick={() => setIsOpen(true)}>Show more</BtnMore>
+        {isOpen && (
+          <BasicModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)}>
+            <CampersDetails onClose={() => setIsOpen(false)} item={item} />
+          </BasicModalWindow>
+        )}
       </div>
     </Wrapper>
   );
