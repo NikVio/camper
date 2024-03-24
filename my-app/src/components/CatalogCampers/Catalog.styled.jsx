@@ -45,10 +45,6 @@ export const BtnHeart = styled.button`
   align-items: center;
   justify-content: center;
   padding: 0px;
-  &:focus-within {
-    stroke: none;
-    fill: ${theme.hover.color.orange};
-  }
 `;
 
 export const DescrText = styled.p`

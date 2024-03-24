@@ -34,34 +34,16 @@ export const FormModal = () => {
       }}
     >
       <Form>
-        <Field name="name" type="name" variant="outline" placeholder="Name" />
+        <Field name="name" type="name" placeholder="Name" />
         <ErrorMessage name="name" component="span" />
 
-        <Field
-          name="email"
-          type="email"
-          variant="outline"
-          placeholder="Email"
-        />
+        <Field name="email" type="email" placeholder="Email" />
         <ErrorMessage name="email" component="span" />
-        <div>
-          <Field
-            name="date"
-            type="name"
-            variant="outline"
-            placeholder="Booking date"
-          />
-          {/* <svg>
-            <use href={`${sprite}#icon-close-x`} />
-          </svg> */}
-        </div>
+
+        <Field name="date" type="date" placeholder="Booking date" />
+
         <ErrorMessage name="date" component="span" />
-        <Comment
-          name="comment"
-          type="comment"
-          variant="outline"
-          placeholder="Comment"
-        />
+        <Comment name="comment" type="comment" placeholder="Comment" />
 
         <FormBtn type="submit">Send</FormBtn>
       </Form>
