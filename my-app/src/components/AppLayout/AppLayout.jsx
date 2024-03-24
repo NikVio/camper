@@ -1,27 +1,27 @@
 import { Suspense } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { GlobalStyle } from "../../GlobalStyle";
-//import { Header, HeaderList, StyledLink } from "./AppLayout.styled";
+import { Header, HeaderList, StyledLink } from "./AppLayout.styled";
 
 export const AppLayout = () => {
   return (
     <div>
       <Suspense fallback={<p>Loading page...</p>}>
-        <header>
+        <Header>
           <nav>
-            <ul>
+            <HeaderList>
               <li>
-                <Link to="/">Home</Link>
+                <StyledLink to="/">Home</StyledLink>
               </li>
               <li>
-                <Link to="/campers">Catalog</Link>
+                <StyledLink to="/campers">Catalog</StyledLink>
               </li>
               <li>
-                <Link to="/favorites">Favorites</Link>
+                <StyledLink to="/favorites">Favorites</StyledLink>
               </li>
-            </ul>
+            </HeaderList>
           </nav>
-        </header>
+        </Header>
         <main>
           <Outlet />
         </main>

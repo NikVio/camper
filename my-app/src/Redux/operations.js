@@ -1,9 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
+
 import {
-  addCamper,
   deleteCamper,
   getCamper,
   getCampers,
+  paginationCamper,
 } from "../Services/axios";
 
 export const fetchCampers = createAsyncThunk(
@@ -44,9 +45,21 @@ export const fetchCamper = createAsyncThunk(
 
 export const deletedCamper = createAsyncThunk(
   "advert/deletedCamper",
-  async (_, thunkAPI) => {
+  async (id, thunkAPI) => {
     try {
-      const data = await deleteCamper();
+      const data = await deleteCamper(id);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const pageCamper = createAsyncThunk(
+  "advert/pageCamper",
+  async (item, thunkAPI) => {
+    try {
+      const data = await paginationCamper(item);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

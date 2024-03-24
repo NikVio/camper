@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { deletedCamper, fetchCampers } from "./operations";
+import { deletedCamper, fetchCampers, pageCamper } from "./operations";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -12,6 +12,7 @@ const handleRejected = (state, { payload }) => {
 
 const initialState = {
   items: [],
+  page: 0,
   isLoading: false,
   error: null,
 };
@@ -35,7 +36,11 @@ export const advertSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-      .addCase(deletedCamper.rejected, handleRejected);
+      .addCase(deletedCamper.rejected, handleRejected)
+      .addCase(pageCamper.fulfilled, (state, { payload }) => {
+        state.items.push(...payload.item);
+        state.page = payload.page;
+      });
   },
 });
 

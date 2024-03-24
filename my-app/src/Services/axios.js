@@ -21,3 +21,8 @@ export const deleteCamper = async (id) => {
   const response = await axios.delete(`/advert/${id}`);
   return response.data;
 };
+
+export const paginationCamper = async (item) => {
+  const response = await axios.get(`/advert/?page=${item.page}&limit=4`);
+  return { item: response.data, page: item.page };
+};
